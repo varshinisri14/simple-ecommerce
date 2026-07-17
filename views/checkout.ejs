@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;">Checkout</h1>
+
+<form action="/checkout" method="POST" style="width:350px; margin:30px auto;">
+
+    <input type="text" name="name" placeholder="Enter Full Name" required><br><br>
+
+    <textarea name="address" placeholder="Enter Address" required></textarea><br><br>
+
+    <select name="payment">
+        <option>Cash on Delivery</option>
+        <option>UPI</option>
+        <option>Credit Card</option>
+    </select><br><br>
+
+    <button type="submit">Place Order</button>
+
+</form>
+
+</body>
+</html>

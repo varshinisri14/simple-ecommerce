@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;">Products</h1>
+
+<section class="products">
+
+<% products.forEach(product => { %>
+
+    <div class="card">
+        <h3><%= product.name %></h3>
+        <p>₹<%= product.price %></p>
+        <form action="/add-to-cart" method="POST">
+    <input type="hidden" name="name" value="<%= product.name %>">
+    <input type="hidden" name="price" value="<%= product.price %>">
+
+    <button type="submit">Add to Cart</button>
+</form>
+    </div>
+
+<% }) %>
+
+</section>
+
+</body>
+</html>
